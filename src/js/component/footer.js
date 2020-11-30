@@ -1,10 +1,30 @@
-import React, { Component } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => (
-	<footer className="footer mt-auto py-3 text-center">
-		<p>
-			Made with <i className="fa fa-heart text-danger" /> by{" "}
-			<a href="http://www.4geeksacademy.com">4Geeks Academy</a>
-		</p>
-	</footer>
+	<div className="container">
+		<footer className="footer mt-auto text-center">
+			<div className="container flex text-center">
+				<Link to="/">
+					<i className="fas fa-gamepad fa-4x" />
+				</Link>
+			</div>
+
+			{/* <div className="wrapper">
+				<div className="clearfix">
+					<Link className="text" to="/">
+						<i className="fas fa-home fa-2x" />
+					</Link>
+					<br />
+					<Link className="text" to="/Gallery/">
+						<i className="fas fa-gamepad fa-2x" />
+					</Link>
+					<br />
+					<Link className="text" to="/Signup">
+						<i className="fas fa-user-plus fa-2x" />
+					</Link>
+				</div>
+			</div> */}
+		</footer>
+	</div>
 );
