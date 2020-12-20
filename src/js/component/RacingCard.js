@@ -14,7 +14,7 @@ export function RacingCard(props) {
 			<div
 				className="card mb-4 shadow-sm"
 				style={{
-					width: "25%",
+					// width: "25%",
 					// marginLeft: "200px",
 					border: "3px solid",
 					boxShadow: "unset",
@@ -23,7 +23,9 @@ export function RacingCard(props) {
 					backgroundColor: "black",
 					flexWrap: "wrap"
 				}}>
-				<img src={props.racing.photo} className="card-img-top" style={{ width: "500%" }} />
+				<div className="raise">
+					<img src={props.racing.photo1} className="card-img-top" style={{ width: "100%" }} />
+				</div>
 				<div className="card-body">
 					<p className="card-text">{props.racing.name}</p>
 				</div>

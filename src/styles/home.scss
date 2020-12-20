@@ -20,9 +20,9 @@
     inset 3.5em 0 0 0 var(--hover);
 }
 // Size can also be negative; see how it's smaller than the element
-.raise:hover,
+.raise:hover, 
 .raise:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  box-shadow: 0 1em 1em -0.7em var(--hover);
   transform: translateY(-0.25em);
 }
 // Animating from the bottom
@@ -139,3 +139,4 @@ code {
 
     margin-bottom: 5px;
 }
+

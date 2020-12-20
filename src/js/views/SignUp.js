@@ -1,19 +1,20 @@
 import React, { useState, useContext, useCallback } from "react";
-import { Redirect } from "react-router-dom";
-import PropTypes from "prop-types";
-import app from "../base";
-// import { Context } from "../store/appContext";
 
-export const Login = ({ history }) => {
-	const handleLogin = useCallback(
+import app from "../base";
+import { WithRouter } from "react-router-dom";
+import PropTypes from "prop-types";
+
+export const SignUp = ({ history }) => {
+	const handleSignUp = useCallback(
 		async event => {
 			event.preventDefault();
 			const { email, password } = event.target.elements;
 			try {
-				await app.auth().signInWithEmailAndPassword(email.value, password.value);
+				await app.auth().createUserWithEmailAndPassword(email.value, password.value);
 				// history.push("/");
-				// location.replace("https://3000-d8974454-0d60-4f1d-888b-0628666ba0f0.ws-us02.gitpod.io/Gallery");
-				location.replace("/Gallery");
+				// // let renderRedirect = () => {
+				// location.replace("https://3000-d8974454-0d60-4f1d-888b-0628666ba0f0.ws-us02.gitpod.io");
+				location.replace("/");
 			} catch (error) {
 				alert(error);
 			}
@@ -21,20 +22,20 @@ export const Login = ({ history }) => {
 		[history]
 	);
 	return (
-		<div className="container3">
-			<form className="form" onSubmit={handleLogin}>
+		<div className="container2">
+			<form onSubmit={handleSignUp}>
 				<div className="form-group">
-					<h1>Login</h1>
+					<h1>Sign Up</h1>
 					<input
 						name="email"
 						type="email"
 						className="form-control"
 						id="exampleInputEmail"
 						area-describedby="emailhelp"
-						placeholder="Email"
+						placeholder="Add Email"
 					/>
 					<small id="emailHelp" className="form-text text-muted">
-						{" Info Secure"}
+						{" Add Your Info"}
 					</small>
 				</div>
 				<div className="form-group">
@@ -43,15 +44,15 @@ export const Login = ({ history }) => {
 						type="password"
 						className="form-control"
 						id="exampleInputPassword"
-						placeholder="Password"
+						placeholder="Add Password"
 					/>
-					<button className="btn-1">Login</button>
+					<button className="btn-1">Sign Up</button>
 				</div>
 			</form>
 		</div>
 	);
 };
 
-Login.propTypes = {
+SignUp.propTypes = {
 	history: PropTypes.object
 };

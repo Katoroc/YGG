@@ -13,9 +13,8 @@ export function Header(props) {
 	let gallery = actions.getGallery(params.id);
 	// console.log(gallery);
 	return (
-		<div className="container">
-			<div className="jumbotron jumbotron-fluid" style={{ margin: 0, backgroundColor: "black" }}>
-				{/* <img src={gallery.photo} className="card-img-top" alt="..." /> */}
+		<div className="container-fluid">
+			<div className="jumbotron jumbotron-fluid">
 				<h4>
 					text paragraph, text paragraph, text paragraph, text paragraph, text paragraph, text paragraph, text
 					paragraph, text paragraph, text paragraph, text paragraph, text paragraph,text paragraph, text

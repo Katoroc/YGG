@@ -12,9 +12,9 @@ export function ActionCard(props) {
 			}}
 			className="col-md-4">
 			<div
-				className="card mb-4 shadow-sm"
+				className="card mb-4 "
 				style={{
-					width: "25%",
+					// width: "25%",
 					// marginLeft: "200px",
 					border: "3px solid",
 					boxShadow: "unset",
@@ -23,7 +23,9 @@ export function ActionCard(props) {
 					backgroundColor: "black",
 					flexWrap: "wrap"
 				}}>
-				<img src={props.action.photo} className="card-img-top" style={{ width: "500%" }} />
+				<div className="raise">
+					<img src={props.action.photo1} className="card-img-top" style={{ width: "100%" }} />
+				</div>
 				<div className="card-body">
 					<p className="card-text">{props.action.name}</p>
 				</div>
